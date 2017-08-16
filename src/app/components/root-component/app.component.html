@@ -1,0 +1,36 @@
+<!-- <div class="site-wrapper"> -->
+<div>
+
+  <!-- <div class="site-wrapper-inner"> -->
+
+
+    <!-- <div class="cover-container"> -->
+
+
+      <div class="masthead clearfix">
+        <div class="inner">
+          <h3 class="masthead-brand">Example App</h3>
+          <nav class="nav nav-masthead">
+            <a class="nav-link active" routerLink="/home" routerLinkActive="active">Home</a>
+            <a class="nav-link" routerLink="/login" routerLinkActive="active">Login</a>
+            <a class="nav-link" routerLink="/register" routerLinkActive="active">Sign Up</a>
+          </nav>
+        </div>
+      </div>
+
+      <!-- <div class="inner cover" [@routerTransition]="getState(o)"> -->
+      <div [@routerTransition]="getState(o)" class="my-router-class">
+        <router-outlet #o="outlet"></router-outlet>
+      </div>
+
+      <div class="mastfoot">
+        <div class="inner">
+          <p>Angular 4 Seed Project by Francisco Martinez. Github: <a href="https://github.com/tekmexico-franzmarz/angular-4-seed">https://github.com/tekmexico-franzmarz/angular-4-seed</a>.</p>
+        </div>
+      </div>
+
+
+
+
+
+</div>
