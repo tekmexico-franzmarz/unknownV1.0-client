@@ -2,6 +2,18 @@
   color: white;
 }
 
+.form-buttons {
+  flex-flow: row;
+  justify-content: end;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  margin-right: 4px;
+}
+
+.form-buttons a {
+  margin-right: 20px;
+}
+
 .error-notifications {
   margin-bottom: 10px;
   margin-top: -20px;
@@ -19,116 +31,46 @@
   color: black;
 }
 
-.social-btn {
-  border: none;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  outline: 0;
-  overflow: hidden;
-  position: relative;
-  border-radius: 3px;
-  position: relative;
-  padding: 0;
-  margin: 10px 1px;
-  font-size: 16px;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 0;
-  color: #FFF;
-  will-change: box-shadow, transform;
-  transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 2px 2px 0 rgba(153, 153, 153, 0.14), 0 3px 1px -2px rgba(153, 153, 153, 0.2), 0 1px 5px 0 rgba(153, 153, 153, 0.12);
-}
-
-.btn-twitter {
-  background-color: #55ACEE;
-}
-
-.btn-facebook {
-  background-color: #3B5998;
-}
-
-.btn-instagram {
-  background-color: #c13584;
-}
-
-.social-btn:hover {
-  box-shadow: 0 14px 26px -12px rgba(0, 0, 0, 0.2), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.1);
-}
-
 @media (min-width: 768px) {
   .omb_row-sm-offset-3 div:first-child[class*="col-"] {
     margin-left: 25%;
   }
 }
-
-.omb_login .omb_authTitle {
-  text-align: center;
-  line-height: 300%;
+.omb_socialButtons {
+  flex-flow: row;
+  justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 20px;
 }
 
-.omb_login .omb_socialButtons a {
+.omb_socialButtons .omb_btn-facebook {
+  background: #3b5998;
+  margin-right: 20px;
   color: white; // In yourUse @body-bg
-  opacity: 0.9;
+  opacity: 0.8;
+  cursor: pointer;
 }
-
-.omb_login .omb_socialButtons a:hover {
-  color: white;
+.omb_socialButtons .omb_btn-facebook:hover {
   opacity: 1;
 }
 
-.omb_login .omb_socialButtons .omb_btn-facebook {
-  background: #3b5998;
-}
-
-.omb_login .omb_socialButtons .omb_btn-twitter {
+.omb_socialButtons .omb_btn-twitter {
   background: #00aced;
+  margin-right: 20px;
+  color: white; // In yourUse @body-bg
+  opacity: 0.8;
+  cursor: pointer;
+}
+.omb_socialButtons .omb_btn-twitter:hover {
+  opacity: 1;
 }
 
-.omb_login .omb_socialButtons .omb_btn-google {
-  background: #c32f10;
+.omb_socialButtons .omb_btn-instagram {
+  background: #c13584;
+  color: white; // In yourUse @body-bg
+  opacity: 0.8;
+  cursor: pointer;
 }
-
-.omb_login .omb_loginOr {
-  position: relative;
-  font-size: 1.5em;
-  color: #aaa;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
-}
-
-.omb_login .omb_loginOr .omb_hrOr {
-  background-color: #cdcdcd;
-  height: 1px;
-  margin-top: 0px !important;
-  margin-bottom: 0px !important;
-}
-
-.omb_login .omb_loginOr .omb_spanOr {
-  display: block;
-  position: absolute;
-  left: 50%;
-  top: -0.6em;
-  margin-left: -1.5em;
-  background-color: white;
-  width: 3em;
-  text-align: center;
-}
-
-.omb_login .omb_loginForm .input-group.i {
-  width: 2em;
-}
-
-.omb_login .omb_loginForm .help-block {
-  color: red;
-}
-
-@media (min-width: 768px) {
-  .omb_login .omb_forgotPwd {
-    text-align: right;
-    margin-top: 10px;
-  }
+.omb_socialButtons .omb_btn-instagram:hover {
+  opacity: 1;
 }
