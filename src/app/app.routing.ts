@@ -1,4 +1,4 @@
-import { Routes, RouterModule } from '@angular/router'
+import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './components/root-component/app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -13,11 +13,11 @@ import { BroadcastService } from './services/broadcast/broadcast.service';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent,data: { state: 'home' } },
-  { path: 'login', component: LoginComponent,data: { state: 'login' } },
-  { path: 'register', component: RegisterComponent,data: { state: 'register' } },
-  {
-    path: 'dashboard', component: DashboardComponent,  resolve: { loadedProfile: DataService }, children: [
+  { path: 'home', component: HomeComponent, data: { state: 'home' } },
+  { path: 'login', component: LoginComponent, data: { state: 'login' } },
+  { path: 'register', component: RegisterComponent, data: { state: 'register' } },
+  /* { path: 'dashboard', component: DashboardComponent,  resolve: { loadedProfile: DataService }, children: [ */
+    { path: 'dashboard', component: DashboardComponent, children: [
       { path: '', component: MainComponent },
       { path: 'main', component: MainComponent },
       { path: 'logout', component: LogoutComponent }

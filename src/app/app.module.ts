@@ -2,8 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
-import { LocationStrategy, HashLocationStrategy } from "@angular/common";
-import { Routing } from "./app.routing";
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+import { Routing } from './app.routing';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
@@ -17,6 +17,9 @@ import { LogoutComponent } from './components/logout/logout.component';
 
 import { DataService } from './services/data/data.service';
 import { BroadcastService } from './services/broadcast/broadcast.service';
+
+
+import { CookieService } from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [
@@ -36,9 +39,12 @@ import { BroadcastService } from './services/broadcast/broadcast.service';
     ReactiveFormsModule,
     BrowserAnimationsModule
   ],
-  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy },
+  providers: [
+    { provide: LocationStrategy, useClass: HashLocationStrategy },
     BroadcastService,
-    DataService,],
+    DataService,
+    CookieService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

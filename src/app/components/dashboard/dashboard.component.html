@@ -1,3 +1,11 @@
+<h1>You have signed in with: Facebook</h1>
+<!-- <<< Change this to dynamic -->
+<img src="{{myProfile.profileImage}}" alt="{{myProfile.profileImage}}" width="200px" height="200px">
 <p>
-  dashboard works!
+  ID: {{myProfile._id || "Loading..."}}</p>
+<p>Full Name: {{myProfile.fullName || "Loading..."}}</p>
+<p>Username: {{myProfile.username || "Loading..."}}</p>
+<p>Email:{{myProfile.email || "Loading..."}}
 </p>
+
+<!-- Add loading gif on img src || Add email to main Schema || Add mini version and large version of images in schema || change the sign in string to update dinamically -->
