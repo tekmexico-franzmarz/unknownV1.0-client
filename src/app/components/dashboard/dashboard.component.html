@@ -1,11 +1,13 @@
-<h1>You have signed in with: Facebook</h1>
+<h1>You have signed in with: {{signinOrigin || "Loading..."}}</h1>
 <!-- <<< Change this to dynamic -->
-<img src="{{myProfile.profileImage}}" alt="{{myProfile.profileImage}}" width="200px" height="200px">
-<p>
-  ID: {{myProfile._id || "Loading..."}}</p>
-<p>Full Name: {{myProfile.fullName || "Loading..."}}</p>
-<p>Username: {{myProfile.username || "Loading..."}}</p>
-<p>Email:{{myProfile.email || "Loading..."}}
-</p>
+<img src="../../../assets/images/loading.gif" width="200px" height="200px" *ngIf="!myProfile">
+<ng-container *ngIf="myProfile">
+  <img src="{{myProfile.profileImageThumb}}" alt="{{myProfile.profileImageThumb}}">
+  <p>ID: {{myProfile._id || "Loading..."}}</p>
+  <p>Full Name: {{myProfile.fullName || "Loading..."}}</p>
+  <p>Username: {{myProfile.username || "Loading..."}}</p>
+  <p>Email: {{myProfile.email || "Loading..."}}</p>
+</ng-container>
 
-<!-- Add loading gif on img src || Add email to main Schema || Add mini version and large version of images in schema || change the sign in string to update dinamically -->
+
+<!-- change the title to update dinamically signin method dynamically -->

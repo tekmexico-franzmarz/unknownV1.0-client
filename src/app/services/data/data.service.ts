@@ -36,12 +36,6 @@ export class DataService {
   }
 
   setMyProfile(token, origin) {
-    /* this.getMyProfile(token, origin).subscribe(
-      (data) => {
-        this.myProfile = data;
-        return this.myProfile;
-      }
-    ); */
     return this.http.post('/api/users/getMyProfile', { token, origin }).map((res: Response) => res.json());
   }
   getMyProfile(token, origin): Observable<any> {

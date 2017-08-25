@@ -30,8 +30,9 @@ export class DashboardComponent implements OnInit {
       token: string
     }
   }; */
-  public myProfile = {};
+  public myProfile;
   public fbToken;
+  public signinOrigin;
   paramMapSubscription$: Subscription;
 
   constructor(private route: ActivatedRoute, private router: Router, private dataService: DataService,
@@ -40,6 +41,20 @@ export class DashboardComponent implements OnInit {
     this.paramMapSubscription$ = route.queryParams.subscribe(params => {
       this.dataService.getMyProfile(params.code, params.origin).subscribe((data) => {
         this.myProfile = data;
+        switch (params.origin) {
+          case 'fb':
+            this.signinOrigin = 'Facebook';
+            break;
+          case 'tw':
+            this.signinOrigin = 'Twitter';
+            break;
+          case 'inst':
+            this.signinOrigin = 'Instagram';
+            break;
+          case 'local':
+            this.signinOrigin = 'Local';
+            break;
+        }
         console.log('Inside dashboard component | this.myProfile=', this.myProfile);
       });
     });
